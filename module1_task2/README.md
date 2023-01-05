@@ -12,7 +12,7 @@
     -   Each comment should start with two characters  `#`
 
 ## Lifecycle
--   **Post** : Generate the website from the markdown and configuration files in the directory `dist/`.
--   **Build** : Cleanup the content of the directory `dist/`
--   **Clean** : Create a new blog post whose filename and title come from the environment variables `POST_TITLE` and `POST_NAME`.
--   **Help** : Prints out the list of targets and their usage.
+-   **post** : Generate the website from the markdown and configuration files in the directory `dist/`.
+-   **build** : Cleanup the content of the directory `dist/`
+-   **clean** : Create a new blog post whose filename and title come from the environment variables `POST_TITLE` and `POST_NAME`.
+-   **help** : Prints out the list of targets and their usage.
