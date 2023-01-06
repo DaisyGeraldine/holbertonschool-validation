@@ -3,10 +3,9 @@
 
 ## * The production website is hosted in an Ubuntu 18.04 Docker container
 ## * The applications "GoHugo" and "Make" are installed with `apt-get update && apt-get install -y hugo`.
-sudo apt-get -y update
-sudo apt-get upgrade -y
-sudo apt-get install -y hugo
+apt install wget -y
+wget https://github.com/gohugoio/hugo/releases/download/v0.84.0/hugo_extended_0.84.0_linux-amd64.deb
+apt-get update && apt-get install -y make && sudo dpkg -i hugo_extended_0.84.0_linux-amd64.deb
 # docker pull klakegg/hugo
-sudo apt-get install -y make
 ## *  When running the command `make build`, there is a bunch of errors which end with the following lines:
 make build
