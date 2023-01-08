@@ -25,8 +25,10 @@ jobs:
           cd module3_task2 && make build
       - name: "Run make target package" # Execute the command make package
         run: |
-	  cd module3_task2 && make package
-      - name: "Run make target lint" # Should be updated to lint the files README.md and DEPLOY.md
+          cd module3_task2 && make package
+      - name: "Run make target lint" # Should be updated to lint the files MD
+        run: |
           cd module3_task2 && make lint
       - name: "Test" # Execute test
+        run: |
           npm test
