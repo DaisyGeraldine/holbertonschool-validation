@@ -18,8 +18,8 @@ jobs:
 
       - name: "Run bash script"
         run: |
-          cd module3_task1
-          ./setup.sh
+          cd module3_task1 && ./setup.sh
 
       - name: "Run make build" # Execute the command make build
-        run: make build -C module3_task1
+        run: |
+          cd module3_task1 && make build
