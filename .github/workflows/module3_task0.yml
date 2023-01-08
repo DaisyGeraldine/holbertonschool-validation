@@ -2,7 +2,7 @@ name: module3_task0
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   schedule:
     # is a special character in YAML so you have to quote this string
     - cron: '30 00 * * *'
