@@ -17,7 +17,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: "Run bash script"
-        run: cd module3_task1 && ./setup.sh
+        run: |
+	     cd module3_task1
+	     ./setup.sh
 
-      - name: "Run make help" # Execute the command make help
+      - name: "Run make build" # Execute the command make build
         run: cd module3_task1 && make build
