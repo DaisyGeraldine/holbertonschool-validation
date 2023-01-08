@@ -1,0 +1,23 @@
+name: module3_task1
+
+on: # Events that trigger workflows
+  push:
+    branches: [master]
+  schedule:
+    # is a special character in YAML so you have to quote this string
+    - cron: '30 00 * * *' # time 12:30 am
+
+jobs:
+  build:
+
+    runs-on: ubuntu-18.04
+
+    steps:
+      - name: "Checkout" # Download code from the repository
+        uses: actions/checkout@v3
+
+      - name: "Run bash script"
+        run: cd module3_task1 && ./setup.sh
+
+      - name: "Run make help" # Execute the command make help
+        run: cd module3_task1 && make build
