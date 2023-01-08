@@ -1,3 +1,4 @@
+# Welcome to Awesome Inc.
 ## Prerequisites
 -   **Same requirements as the previous task:**
     
@@ -16,3 +17,9 @@
 -   **build** : Cleanup the content of the directory `dist/`
 -   **clean** : Create a new blog post whose filename and title come from the environment variables `POST_TITLE` and `POST_NAME`.
 -   **help** : Prints out the list of targets and their usage.
+
+## Workflow
+-  The original workflow file <...>/.github/workflows/module3_task0.yml must be:
+   -  Present with a valid YAML syntax
+   -  It must be a valid GitHub action workflow with 1 job and 1 steps
+   -  It must be have 2 triggers
