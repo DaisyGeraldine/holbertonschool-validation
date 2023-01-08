@@ -22,4 +22,4 @@ jobs:
           ./setup.sh
 
       - name: "Run make build" # Execute the command make build
-        run: cd module3_task1 && make build
+        run: make build -C module3_task1
