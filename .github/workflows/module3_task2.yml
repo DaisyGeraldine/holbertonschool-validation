@@ -29,6 +29,6 @@ jobs:
       - name: "Run make target lint" # Should be updated to lint the files MD
         run: |
           cd module3_task2 && make lint
-      - name: "Test" # Execute test
+      - name: "Uni-Test" # Execute test
         run: |
-          npm test
+          cd module3_task2 && make unit-tests
