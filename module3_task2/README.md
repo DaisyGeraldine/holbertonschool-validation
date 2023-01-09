@@ -33,9 +33,10 @@ environment variables `POST_TITLE` and `POST_NAME`.
 
 ## Build Workflow
 
-- The file .github/workflows/module3_task1.yml must be present
-
-  - It must be valid in YAML syntax
-  - It must be a valid GitHub action workflow with 1 job with at least 3 steps
-  (checkout, running setup.sh and then the 5 make commands)
-  - It must be have 2 triggers
+- steps
+  - Checkout
+  - Run bash script
+  - Run make build
+  - Run make target package
+  - Run make target lint
+  - Uni-Test
