@@ -14,6 +14,8 @@ lint:     ## Updated to lint the files README.md and DEPLOY.md with markdownlint
 unit-tests: ## Create Uni-test
 	npm test
 integration-tests: ## Create integration test (not-found)
-	echo "Not-found"
+	echo "Not-found integration"
+validate:  ## Create validate test (not-found)
+	echo "Not-found validate"
 help:     ## Prints out the list of targets and their usage
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'

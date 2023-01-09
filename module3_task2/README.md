@@ -26,6 +26,7 @@ environment variables `POST_TITLE` and `POST_NAME`.
 - **lint** : Updated to lint the files README.md and DEPLOY.md with markdownlint
 - **unit-tests** : Create Uni-test
 - **integration-tests** : Integration-tests (No found)
+- **validate** : Validate (No found)
 - **help** : Prints out the list of targets and their usage.
 
 ## Workflow
