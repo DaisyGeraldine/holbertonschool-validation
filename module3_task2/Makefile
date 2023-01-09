@@ -8,7 +8,7 @@ post:     ## Create a new blog post whose filename and title come from the envir
 	hugo new posts/$(POST_NAME).md
 	perl -p -i -e "s[title*.*][title: "'"'"$(POST_TITLE)"'"'"]g" content/posts/$(POST_NAME).md
 package:  ## Create a file named awesome-website.zip
-	zip awesome-website.zip awesome-api dist/
+	zip -r awesome-website.zip awesome-api dist/
 lint:     ## Updated to lint the files README.md and DEPLOY.md with markdownlint
 	markdownlint "*.md"
 unit-tests: ## Create Uni-test npm test -- -u
