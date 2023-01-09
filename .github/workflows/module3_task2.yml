@@ -32,6 +32,9 @@ jobs:
       - name: "Uni-Test" # Execute test
         run: |
           cd module3_task2 && make unit-tests
+      - name: "Integration-tests" # Execute integration-tests
+        run: |
+          cd module3_task2 && make integration-tests
       - name: "Archive production artifacts"
         uses: actions/upload-artifact@master
         with:
