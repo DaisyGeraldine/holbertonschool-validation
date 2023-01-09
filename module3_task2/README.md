@@ -39,4 +39,4 @@ environment variables `POST_TITLE` and `POST_NAME`.
   - Run make build
   - Run make target package
   - Run make target lint
-  - Uni-Test
+  - Run unit-Test
