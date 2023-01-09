@@ -12,3 +12,5 @@ sudo dpkg -i hugo_extended_0.84.0_Linux-64bit.deb
 # docker pull klakegg/hugo
 ## *  When running the command `make build`, there is a bunch of errors which end with the following lines:
 make build
+## Installation markdownlint-cli
+npm install -g markdownlint-cli
