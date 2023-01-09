@@ -35,6 +35,9 @@ jobs:
       - name: "Integration-tests" # Execute integration-tests
         run: |
           cd module3_task2 && make integration-tests
+      - name: "validate" # Execute validate
+        run: |
+          cd module3_task2 && make validation
       - name: "Archive production artifacts"
         uses: actions/upload-artifact@master
         with:
