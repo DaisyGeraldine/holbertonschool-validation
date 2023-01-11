@@ -51,7 +51,6 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           body_path: module3_task3/DEPLOY.md
-          tag_name: 1.0.0
           files: |
             module3_task3/DEPLOY.md
             module3_task3/awesome-website.zip
