@@ -1,0 +1,59 @@
+name: module3_task4
+
+on: # Events that trigger workflows
+  push:
+    branches: [master]
+    tags:
+      - "*.*.*"
+  pull_request:
+    branches: [master]
+    types: [opened, reopened, synchronize]
+  schedule:
+    # is a special character in YAML so you have to quote this string
+    - cron: '30 00 * * *' # time 12:30 am
+
+jobs:
+  build:
+
+    runs-on: ubuntu-18.04
+
+    steps:
+      - name: "Checkout" # Download code from the repository
+        uses: actions/checkout@v3
+
+      - name: "Run bash script"
+        run: |
+          cd module3_task4 && ./setup.sh
+
+      - name: "Run make build" # Execute the command make build
+        run: |
+          cd module3_task4 && make build
+      - name: "Run make target package" # Execute the command make package
+        run: |
+          cd module3_task4 && make package
+      - name: "Run make target lint" # Should be updated to lint the files MD
+        run: |
+          cd module3_task4 && make lint
+      - name: "Uni-Test" # Execute test
+        run: |
+          cd module3_task4 && make unit-tests
+      - name: "Integration-tests" # Execute integration-tests
+        run: |
+          cd module3_task4 && make integration-tests
+      - name: "validate" # Execute validate
+        run: |
+          cd module3_task4 && make validate
+      - name: "Archive production artifacts"
+        uses: actions/upload-artifact@v3
+        with:
+          name: file named awesome-website
+          path: |
+            module3_task4/awesome-website.zip
+      - name: "Release task 4"
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          body_path: module3_task4/DEPLOY.md
+          files: |
+            module3_task4/DEPLOY.md
+            module3_task4/awesome-website.zip
