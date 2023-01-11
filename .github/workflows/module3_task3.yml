@@ -50,3 +50,4 @@ jobs:
         with:
           files: |
             module3_task3/DEPLOY.md
+            module3_task3/awesome-website.zip
