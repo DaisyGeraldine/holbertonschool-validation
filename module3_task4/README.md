@@ -48,3 +48,4 @@ environment variables `POST_TITLE` and `POST_NAME`.
   - Run validate
   - Uses production artifacts
   - Uses Release task 3
+  - end
