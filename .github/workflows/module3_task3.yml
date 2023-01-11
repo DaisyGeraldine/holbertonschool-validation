@@ -3,6 +3,8 @@ name: module3_task2
 on: # Events that trigger workflows
   push:
     branches: [master]
+    tags:
+      - "v*.*.*"
   schedule:
     # is a special character in YAML so you have to quote this string
     - cron: '30 00 * * *' # time 12:30 am
