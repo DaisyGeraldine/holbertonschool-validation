@@ -5,6 +5,7 @@ on: # Events that trigger workflows
     branches: [master]
   pull_request:
     branches: [master]
+    types: [opened, synchronize]
     tags:
       - "*.*.*"
   schedule:
