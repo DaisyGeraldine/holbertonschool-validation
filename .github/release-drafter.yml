@@ -1,35 +1,30 @@
-name-template: 'v$NEXT_PATCH_VERSION 🌈'
-tag-template: 'v$NEXT_PATCH_VERSION'
+name-template: '$RESOLVED_VERSION 🌈'
+tag-template: '$RESOLVED_VERSION'
 categories:
-  - title: 'Features'
+  - title: '🚀 Features'
     labels:
       - 'feature'
       - 'enhancement'
-      - 'feat'
-  - title: 'Improvements'
-    labels:
-      - 'perf'
-      - 'refactor'
-  - title: 'Tests'
-    labels:
-      - 'tests'
-      - 'testing'
-  - title: 'Fixes'
+  - title: '🐛 Bug Fixes'
     labels:
       - 'fix'
       - 'bugfix'
       - 'bug'
-      - 'hotfix'
-      - 'revert'
-  - title: 'Chores'
+  - title: '🧰 Maintenance'
+    label: 'chore'
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+change-title-escapes: '\<*_&'
+version-resolver:
+  major:
     labels:
-      - 'docs'
-      - 'chore'
-      - 'style'
-      - 'build'
-      - 'chores'
-      - 'ci'
-change-template:'- [ ] #$NUMBER $TITLE - @$AUTHOR $DESC '
+      - 'major'
+  minor:
+    labels:
+      - 'minor'
+  patch:
+    labels:
+      - 'patch'
+  default: patch
 template: |
   ## Changes
 
