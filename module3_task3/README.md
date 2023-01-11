@@ -39,9 +39,12 @@ environment variables `POST_TITLE` and `POST_NAME`.
 ## Build Workflow
 
 - steps
-  - Checkout
+  - Uses Checkout
   - Run bash script
   - Run make build
   - Run make target package
   - Run make target lint
   - Run unit-Test
+  - Run validate
+  - Uses production artifacts
+  - Uses Release task 3
