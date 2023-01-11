@@ -38,7 +38,7 @@ environment variables `POST_TITLE` and `POST_NAME`.
 
 ## Build Workflow
 
-- steps
+- Workflows Steps
   - Uses Checkout
   - Run bash script
   - Run make build
