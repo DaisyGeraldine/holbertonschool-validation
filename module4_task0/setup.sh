@@ -14,3 +14,9 @@ sudo dpkg -i hugo_extended_0.84.0_Linux-64bit.deb
 make build
 ## Installation markdownlint-cli
 npm install -g markdownlint-cli
+
+## Clean environment files and directory
+rm -rf dist/ 2> /dev/null
+rm -f awesome-api || true
+rm -f coverage-units.out || true
+rm -f coverage-integrations.out || true
